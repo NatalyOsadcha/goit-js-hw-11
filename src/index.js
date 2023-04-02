@@ -11,6 +11,7 @@ const loadMoreBtn = document.querySelector('.load-more');
 loadMoreBtn.style.display = 'none';
 
 let searchPhotos = '';
+let search = '';
 let photoSet = '';
 let pageNum = 1;
 let photoHits = '';
@@ -24,7 +25,7 @@ galleryContainer.append(list);
 
 function onSubmit(event) {
   event.preventDefault();
-  let search = searchQuery.value.trim();
+  search = searchQuery.value.trim();
   // console.log(searchQuery.value);
 
   if (search !== searchPhotos) {
