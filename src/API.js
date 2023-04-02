@@ -4,15 +4,13 @@ export { fetchPhoto };
 const API_KEY = '34787804-1aefa27f7d66275b11fe28ff3';
 const BASE_URL = 'https://pixabay.com/api/';
 
-function fetchPhoto(search) {
-  return axios
-    .get(
-      `${BASE_URL}?key=${API_KEY}&q=${search}&image_type=photo&orientation=horizontal&safesearch=true`
-    )
-    .then(function (response) {
-      return response;
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
+async function fetchPhoto(search, page) {
+  try {
+    const response = await axios.get(
+      `${BASE_URL}?key=${API_KEY}&q=${search}&image_type=photo&orientation=horizontal&safesearch=true&page=${page}&per_page=40`
+    );
+    return await response.data;
+  } catch (e) {
+    console.error(e);
+  }
 }

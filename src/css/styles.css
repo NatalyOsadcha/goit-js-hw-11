@@ -9,44 +9,60 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #fafafa;
   color: #212121;
+  font-size: 13px;
   line-height: 1.5;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
-#search-box {
+#search-form {
   font: inherit;
-  padding: 8px;
-  max-width: 320px;
-  margin-bottom: 16px;
+  padding: 16px;
+  max-width: 1200px;
+  background-color: #35a0b8;
+  text-align: center;
 }
 
 ul,
 li {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
-li {
+ul {
   display: flex;
-  align-items: center;
-}
-img,
-h2 {
-  display: inline;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 img {
-  margin-right: 15px;
+  display: block;
 }
 
-.country_name {
-  font-size: 36px;
+a {
+  text-decoration: none;
+  color: currentColor;
 }
 
 p {
-  font-size: 24px;
-  font-weight: bold;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-span {
-  font-weight: normal;
+.info {
+  display: flex;
+  justify-content: space-around;
+}
+
+.load-more {
+  display: none;
+  background-color: #35a0b8;
+  font-size: 18px;
+  margin: 15px auto;
 }
