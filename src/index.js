@@ -101,7 +101,7 @@ function renderPhoto(photoSet) {
 
   loadMoreBtn.style.display = 'block';
 
-  finalPage = Math.ceil(Number(photoHits / 40));
+  const finalPage = Math.ceil(Number(photoHits / 40));
   if (pageNum === finalPage) {
     onFinalPage();
   }
