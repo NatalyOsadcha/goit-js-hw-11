@@ -24,7 +24,7 @@ galleryContainer.append(list);
 
 function onSubmit(event) {
   event.preventDefault();
-  search = searchQuery.value.trim();
+  let search = searchQuery.value.trim();
   // console.log(searchQuery.value);
 
   if (search !== searchPhotos) {
